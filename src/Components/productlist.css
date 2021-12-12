@@ -1,0 +1,9 @@
+.nums{
+    border: 2px solid red;
+    /* width: fit-content; */
+    padding: 5rem;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 5rem;
+    text-align: center;
+}
