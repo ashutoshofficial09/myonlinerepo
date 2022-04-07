@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./header";
 import SideBar from "./sideBar";
+import SideBarOption from "./sideBarOption";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <AppBody>
           <SideBar />
+
           <Switch>
             <Route path="/" exact>
               {/* chat happens here */}

@@ -1,6 +1,18 @@
 import styled from "@emotion/styled";
-import { CreateOutlined, FiberManualRecord } from "@mui/icons-material";
+import {
+  AppsOutlined,
+  BookmarkBorder,
+  CreateOutlined,
+  Drafts,
+  ExpandLess,
+  FiberManualRecord,
+  FileCopy,
+  InboxOutlined,
+  InsertComment,
+  PeopleAlt,
+} from "@mui/icons-material";
 import React from "react";
+import SideBarOption from "./sideBarOption";
 
 function SideBar() {
   return (
@@ -15,6 +27,15 @@ function SideBar() {
         </SideBarInfo>
         <CreateOutlined />
       </SideBarHeader>
+
+      <SideBarOption Icon={InsertComment} title="Threads" />
+      <SideBarOption Icon={InboxOutlined} title="Mentions & reactions" />
+      <SideBarOption Icon={Drafts} title="Saved item" />
+      <SideBarOption Icon={BookmarkBorder} title="Channel browser" />
+      <SideBarOption Icon={PeopleAlt} title="People & user group" />
+      <SideBarOption Icon={AppsOutlined} title="Apps" />
+      <SideBarOption Icon={FileCopy} title="File browser" />
+      <SideBarOption Icon={ExpandLess} title="Show less" />
     </SideBarContainer>
   );
 }
@@ -25,17 +46,18 @@ const SideBarContainer = styled.div`
   background-color: #3f0f40;
   color: white;
   flex: 0.3;
-  border-top: 1px solid #4927b;
+  border-top: 1px solid #4927;
   max-width: 240px;
   margin-top: 64px;
 `;
 
 const SideBarHeader = styled.div`
   display: flex;
-  border-bottom: 1px solid #4927b;
+  border-bottom: 1px solid #4927;
   padding: 13px;
+
   > .MuiSvgIcon-root {
-    color: #4927b;
+    color: #4927;
     font-size: 18px;
     border-radius: 50%;
   }
