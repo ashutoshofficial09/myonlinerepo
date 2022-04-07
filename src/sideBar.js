@@ -5,12 +5,14 @@ import {
   CreateOutlined,
   Drafts,
   ExpandLess,
+  ExpandMore,
   FiberManualRecord,
   FileCopy,
   InboxOutlined,
   InsertComment,
   PeopleAlt,
 } from "@mui/icons-material";
+import AddIcon from "@mui/icons-material/Add";
 import React from "react";
 import SideBarOption from "./sideBarOption";
 
@@ -36,6 +38,10 @@ function SideBar() {
       <SideBarOption Icon={AppsOutlined} title="Apps" />
       <SideBarOption Icon={FileCopy} title="File browser" />
       <SideBarOption Icon={ExpandLess} title="Show less" />
+      <hr />
+      <SideBarOption Icon={ExpandMore} title="Channels" />
+      <hr />
+      <SideBarOption Icon={AddIcon} addChannelOption title="Add channels" />
     </SideBarContainer>
   );
 }
@@ -49,6 +55,11 @@ const SideBarContainer = styled.div`
   border-top: 1px solid #4927;
   max-width: 240px;
   margin-top: 64px;
+  > hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #49274b;
+  }
 `;
 
 const SideBarHeader = styled.div`
